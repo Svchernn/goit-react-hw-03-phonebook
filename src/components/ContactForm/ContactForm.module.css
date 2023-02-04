@@ -1,0 +1,37 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: midnightblue;
+}
+
+.formBtn {
+  display: inline-block;
+  padding: 10px 5px;
+  width: 120px;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: midnightblue;
+  font-weight: 700;
+}
+
+.formBtn:hover,
+.formBtn:focus {
+  background-color: rgb(216, 209, 198);
+}
+
+input {
+  height: 35px;
+  width: 100%;
+}
