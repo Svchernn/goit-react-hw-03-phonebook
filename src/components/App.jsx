@@ -19,18 +19,18 @@ export class App extends Component {
     }
   }
 
-  componentDidUpdate(prevProps,prevState) {
+  componentDidUpdate(prevProps, prevState) {
     const { contacts } = this.state;
     if (prevState.contacts.length !== contacts.length) {
       localStorage.setItem('my-phonebook', JSON.stringify(contacts));
     }
-    
   }
 
   addContact = ({ name, number }) => {
     if (this.isDublicate(name)) {
       return alert(`${name} is already in contacts`);
     }
+
     this.setState(prevState => {
       const { contacts } = prevState;
 
@@ -39,6 +39,7 @@ export class App extends Component {
         name,
         number,
       };
+
       return { contacts: [newContact, ...contacts] };
     });
   };
@@ -77,7 +78,7 @@ export class App extends Component {
   }
 
   render() {
-       const { addContact, removeContact, handleFilter } = this;
+    const { addContact, removeContact, handleFilter } = this;
 
     const contacts = this.getFilteredContacts();
 
